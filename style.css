@@ -1,0 +1,293 @@
+@charset "UTF-8";
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --azul: rgb(5, 63, 90);
+}
+main,body{
+    height:100vh;
+    font-family: Arial, Helvetica, sans-serif;
+   
+    
+}
+
+
+
+/*Estilização do cabeçalho*/
+header{
+    
+    top: 0px;
+    height: 120px;
+    
+    background-color:  rgb(5, 63, 90);
+    
+}
+.bloco1-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bloco1-header figure{
+    margin-left:30px;
+    padding-top: 10px;
+}
+.bloco1-header #conta{
+    color: #fff;
+    width: 40px;
+    font-size: 34px;
+    margin-left: 170px;
+    cursor: pointer;
+}
+.bloco1-header #menu{
+    color: #fff;
+    width: 40px;
+    font-size: 34px;
+    cursor: pointer;
+   
+}
+/*Fim da Estilização do cabeçalho*/
+
+/*Estilização do menu*/
+nav{
+    margin-top: 5px;
+  
+    
+}
+nav ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+nav>ul>li{
+    list-style-type: none;
+    display: inline-block;
+    
+    text-align: center;
+    padding: 5px;
+}
+
+nav >ul >li >a{
+    display: flex;
+    color:#fff;
+    text-decoration: none;
+    border:1px solid #fff;
+    padding: 4px;
+    width: 150px;
+    border-radius: 40px;
+    transition: 1s;
+    justify-content: center;
+    align-items: center;
+    font-weight:bold;
+}
+li a:hover{
+
+    background-color: #ffffffa1;
+}
+.btnModal{
+     display: inline;
+}
+#btnmais{
+    
+    color:#fff;
+    text-decoration: none;
+    border:1px solid #fff;
+    padding: 4px;
+    width: 100px;
+    border-radius: 40px;
+    transition: 1s;
+    justify-content: center;
+    align-items: center;
+    font-weight:bold;
+    background-color:rgb(5, 63, 90);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#btnmais:hover{
+    background-color: #ffffffa1; 
+}
+/*Fim do menu*/
+
+/*Slide Show*/
+.container{
+    display: flex;
+    max-width: 600px;
+    min-width :390px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+   margin-bottom:15px;
+    
+}
+.slides-img{
+    width: 100%;
+    flex: 0 0 100%;
+    transition: 1s;
+}
+.radio-buttons{
+    display: flex;
+    position: absolute;
+    top:260px;
+    left:50%;
+}
+.radio-buttons input[type=radio]{
+    cursor: pointer;
+}
+.radio-buttons input[type=radio]:not(:first-child){
+    margin-left: 10px;
+    
+    
+}
+/*Fim(Slide show)*/
+
+/*Formulário*/
+.quest{
+    
+    max-width: 450px;
+    min-width: 390px;
+    margin: auto;
+    color: rgb(255, 196, 0);
+    font-weight: bold;
+}
+.quest label{
+    display: block;
+    margin-top:15px ;
+}
+.quest input{
+    width: 100%;
+    height: 40px;
+    border:  2px solid  var(--azul);
+    outline: none;
+    border-radius: 3px;
+    text-indent: 10px;
+   
+}
+.quest select{
+    width: 100%;
+   
+    border:  2px solid  var(--azul);
+    outline: none;
+    border-radius: 3px;
+    text-indent: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+.btnCalc{
+    height: 40px;
+    border:  2px solid #fff ;
+    color: #fff;
+    background-color: gray;
+    margin-top:15px;
+    border-radius:5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.btnCalc a{
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--azul);
+    border: none;
+    text-align: center;
+    transition: .5s;
+    display: none;
+    text-decoration: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    margin-top: 10px;
+}
+.btnCalc input[type=submit]:hover{
+    background-color: rgb(8, 140, 201);
+}
+.erro{
+    color: red;
+    font-size:12px;
+    display: none;
+    transition: 1s;
+}
+/*Fim do formulário*/
+
+/*Estilização para js (janelas informativas e outros)*/
+    .maisMenu {
+        width: 180px;
+        height: 80px;
+        border: 1px solid #0000007c;
+        background-color: #fff;
+        border-radius: 10px;
+        position: absolute;
+        top:5px;
+        left:285px ;
+        flex-flow: column nowrap ;
+        justify-content: center;
+        display: none;
+        
+    }
+    
+    .maisMenu a{
+        display: block;
+        color:#000;
+        border: none;
+        font-weight: normal;
+        width: 180px;
+        text-align: justify;
+        font-size: 14px;
+        text-decoration: none;
+        transition: .5s;
+        padding: 5px;
+    }
+    
+    .maisMenu a:hover{
+        background-color: #0000001c;
+    }
+    .maisMenu span{
+        font-family:28px;
+    }
+/*Fim da estilização para js*/
+
+
+/*COFINGURAÇÕES DA PÁGINA DE ORÇAMENTOS*/
+.painel{
+    border: 1px solid #0000004f;
+    max-width:420px;
+    min-width: 390px;
+    height: 260px;
+    border-radius: 5px;
+    margin: auto;
+    box-shadow:2px 2px 2px rgba(12, 12, 12, 0.281) ;
+    
+}
+.painel div{
+    margin: 20px;
+    display: flex;
+}
+.painel div input[type=submit]{
+    margin-top: 30px;
+    width: 100%;
+    height: 35px;
+    font-weight: bold;
+    background-color: rgb(5, 172, 5);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+.painel div input[type=submit]:hover{
+    background-color: green;
+}
+
+/*FIM DAS COFINGURAÇÕES DA PÁGINA DE ORÇAMENTOS*/
