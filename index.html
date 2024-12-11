@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatViagens- Viaje por Angola!</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="shortcut icon" href="img/Icon-NatViagens.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="enableEstatico()">
+    <header >
+        <section class="bloco1-header">
+            <figure>
+                <a href="index.html">
+                    <img src="img/Icon-NatViagens.png" alt="icon da empresa"width="90px">
+                                </figure>
+                </a>
+            <span class="material-icons md-18" id="conta">account_circle</span>
+            <span class="material-icons md-18" id="menu">menu</span>
+        </section>
+
+        <section class="bloco-header">
+            <nav>
+        <ul>
+            <li><a href="#" id="viagens"><span class="material-icons md-18">directions_bus</span> Viagens</a></li>
+
+            <li><a href="#" id="hoteis"><span class="material-icons md-18">apartment</span>Hoteis</a></li>
+
+            <button onclick="menuMovel()" id="btnmais"><span class="material-icons md-18">keyboard_arrow_down</span>Mais</button>
+            
+                <!--Janela para mostrar mais do menu(em telas pequenas)-->   
+                
+                
+        
+            
+        </ul>
+    </nav>
+        </section>
+    </header>
+    <main id="main" onclick="retirarModal()">
+        <!--Slide Show-->
+        <section class="container">
+            <div class="radio-buttons">
+                <input type="radio" id="btn1" name="btnRadio" checked>
+                
+                
+                <input type="radio" id="btn2" name="btnRadio">
+            </div>
+            <div class="slides-img" id="divimg1">
+                <img src="img/banner1.png" alt="imagens públicitária " id="img1" width="100%" height="300px">
+            </div>
+
+            <div  class="slides-img" id="divimg2 ">
+                <img src="img/BANNER2.png" alt="Imagem públicitária 2" id="img2" width="100%" height="300px">
+            </div>
+            <div class="maisMenu" id="imaisMenu">
+                <a href="#" id="aluguel" onclick="menuItensSelected()"><span class="material-icons md-18">house</span> Aluguel  de casas</a>
+                
+                    <a href="#" id="passeios" onclick="menuItensSelected()"><span class="material-icons md-18">public</span>Passeios e Actividades</a>
+                
+            </div>
+        </section>
+        <!--Fim do Slide-->
+
+        <!--Questionário/formulário-->
+        <section class="quest">
+            <form action="" method="post">
+                <div>
+                    <label for="localAtual">Onde Você está?</label>
+                    
+                    <select id="localAtual" size="4" >
+                        
+                        <option >Benguela</option>
+                        <option >Bié</option>
+                        <option >Cabinda</option>
+                        <option >Cuando Cubango</option>
+                        <option >Cuanza Norte</option>
+                        <option >Cuanza Sul</option>
+                        <option >Cunene</option>
+                        <option >Huambo</option>
+                        <option >Huíla</option>
+                        <option selected>Luanda</option>
+                        <option >Lunda Norte</option>
+                        <option >Lunda Sul</option>
+                        <option >Malanje</option>
+                        <option >Moxico</option>
+                        <option >Namibe</option>
+                        <option >Uíge</option>
+                        <option >Zaire</option>
+                    </select>
+
+                </div>
+                <div>
+                    <label for="localDestino">Onde Você Deseja Viajar?</label>
+                  
+                    
+                    <select id="localDestino" size="4" >
+                        
+                        <option >Benguela</option>
+                        <option >Bié</option>
+                        <option >Cabinda</option>
+                        <option >Cuando Cubango</option>
+                        <option >Cuanza Norte</option>
+                        <option >Cuanza Sul</option>
+                        <option >Cunene</option>
+                        <option >Huambo</option>
+                        <option >Huíla</option>
+                        <option >Luanda</option>
+                        <option >Lunda Norte</option>
+                        <option >Lunda Sul</option>
+                        <option >Malanje</option>
+                        <option >Moxico</option>
+                        <option >Namibe</option>
+                        <option >Uíge</option>
+                        <option >Zaire</option>
+                    </select>
+                    <p id="ierroPerguntaRepetida" class="erro">Selecione provincias diferetes!</p>
+                </div>
+
+                <div class="data">
+                    <label for="dataViagem">Quando pretende Viajar?</label>
+                    <input type="date" required id="dataViagem" onblur="dataViagemBlur()">
+                    <p class="erro" id="ierroData" >Data inváida, experimente datas futuras até (01-01-2026).</p>
+                </div>
+
+                <div class="totAdultos">
+                    <label for="totAdultos">Quantos Adultos irão nesta viajem</label>
+                  <input type="number" placeholder="Número de Bilhetes Para Adultos(18 anos ou +)" required max="50" id="totAdultos">
+                  <p class="erro" id="ierroTotAdultos" > Digite um valor entre 1 e 50</p>
+                </div>
+                <div class="totCriancas">
+                    <label for="totCriancas">Quantas Criancas irão nesta viajem</label>
+                    <input type="number" placeholder="Número de Bilhetes Para Criaças(17 anos ou -)" required max="50" id="totCriancas">
+                      <p class="erro" id="ierroTotCriancas">Digite um valor entre 1 e 50</p>
+                </div>
+                <div class="btnCalc" id="blcCalcular">
+                    <p id="pCalcular">CALCULAR</p>
+                    <a href="orcamentos.html" id="btnCalcular" onclick="calcular()">CALCULAR</a>
+                     
+                </div>
+            
+            </form>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

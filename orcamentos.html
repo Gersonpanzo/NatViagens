@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatViagens- Viaje por Angola!</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="img/Icon-NatViagens.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="resultado()">
+    <header>
+        <section class="bloco1-header">
+            <figure>
+                <a href="index.html">
+                    <img src="img/Icon-NatViagens.png" alt="icon da empresa" width="90px">
+            </figure>
+            </a>
+            <span class="material-icons md-18" id="conta">account_circle</span>
+            <span class="material-icons md-18" id="menu">menu</span>
+        </section>
+
+        <section class="bloco-header">
+            <nav>
+                <ul>
+                    <li><a href="#" id="viagens"><span class="material-icons md-18">directions_bus</span> Pagina
+                            inicial</a>
+                    </li>
+
+                    <li><a href="#" id="hoteis"><span class="material-icons md-18">apartment</span>Hoteis</a></li>
+
+
+                    <!--Janela para mostrar mais do menu(em telas pequenas)-->
+                    <button onclick="menuMovel()" id="btnmais"><span
+                            class="material-icons md-18">keyboard_arrow_down</span>Mais</button>
+
+
+
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main id="main" onclick="retirarModal()">
+        <!--Slide Show-->
+        <section class="container">
+            <div class="radio-buttons">
+                <input type="radio" id="btn1" name="btnRadio" checked>
+
+
+                <input type="radio" id="btn2" name="btnRadio">
+            </div>
+            <div class="slides-img" id="divimg1">
+                <img src="img/vista-marginal-luanda.png" alt="imagens públicitária " id="img1" width="100%"
+                    height="300px">
+            </div>
+
+            <div class="slides-img" id="divimg2 ">
+                <img src="img/intercontinental-luanda.png" alt="Imagem públicitária 2" id="img2" width="100%"
+                    height="300px">
+            </div>
+            <div class="maisMenu" id="imaisMenu">
+                <a href="#" id="aluguel" onclick="menuItensSelected()"><span class="material-icons md-18">house</span>
+                    Aluguel de casas</a>
+                <a href="#" id="passeios" onclick="menuItensSelected()"><span
+                        class="material-icons md-18">public</span>Passeios e Actividades</a>
+
+            </div>
+        </section>
+        <!--Fim do Slide-->
+        <!--Painel de resultados-->
+        <section class="painel">
+          
+                <div>
+                    <img src="img/select(4).png" alt="imagem de de selector" width="20px">
+                    <p id="resutotAdultos">Bilhete para Adutos:</p>
+                </div>
+
+                <div>
+                    <img src="img/select(4).png" alt="imagem de de selector" width="20px">
+                    <p id="resutotCriancas">Bilhete para Crianças:</p>
+                </div>
+
+                <div>
+                    <img src="img/select(4).png" alt="imagem de de selector" width="20px">
+                    <p id="resuData">Data mais próxima compactivel:</p>
+                </div>
+                <div>
+                    <img src="img/select(4).png" alt="imagem de de selector" width="20px">
+                    <p id="total">Total:</p>
+                </div>
+                <div>
+                    
+                    <input type="submit" value="Comprar  ">
+                </div>
+            
+        </section>
+        <!--Fim do painel dos resultados-->
+        </main>
+        <script src="js/script.js"></script>
+</body>
+
+</html>
